@@ -123,9 +123,9 @@
 					$link.addClass('active');
 
 				// Set max/min height.
-					$main
-						.css('max-height', $main.height() + 'px')
-						.css('min-height', $main.height() + 'px');
+					// $main
+					// 	.css('max-height', $main.height() + 'px')
+					// 	.css('min-height', $main.height() + 'px');
 
 				// Delay.
 					setTimeout(function() {
@@ -151,9 +151,9 @@
 									$panel.removeClass('inactive');
 
 								// Clear max/min height.
-									$main
-										.css('max-height', '')
-										.css('min-height', '');
+									// $main
+									// 	.css('max-height', '')
+									// 	.css('min-height', '');
 
 								// IE: Refresh.
 									$window.triggerHandler('--refresh');

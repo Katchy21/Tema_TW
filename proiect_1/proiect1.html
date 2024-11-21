@@ -23,17 +23,17 @@
     <body class="is-preload">
         <div id="wrapper">
             <nav id="nav">
-                <a href="#" class="nav-icon">
+                <a href="#" class="nav-icon" onclick="revealHomeArticle()">
                     <span>
                     <img src="static/images/home.png" alt="Home image">
                     </span>
                 </a>
-                <a href="#work" class="nav-icon">
+                <a href="#work" class="nav-icon" onclick="revealWorkArticle()">
                     <span>
                     <img src="static/images/folder.png" alt="Home image">
                     </span>
                 </a>
-                <a href="#contact" class="nav-icon">
+                <a href="#contact" class="nav-icon" onclick="revealContactArticle()">
                     <span>
                     <img src="static/images/mail.png" alt="Home image">
                     </span>
@@ -45,11 +45,10 @@
                         <h2>Fotin Mihnea</h2>
                         <p>Student at Faculty of Automatic Control and Computer Science, Bucharest</p>
                     </header>
-                    <img src="static/images/me.jpg" alt="" />
-                    <!-- <a href="#work" class="jumplink pic">
-                        <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                        <img src="static/images/me.jpg" alt="" />
-                    </a> -->
+                    <a href="#work">
+                        <div class="image-icon">></div>
+                        <img src="static/images/me.jpg" alt="auto biography picture" />
+                    </a>
                 </article>
 
                 <article id="work" class="panel">
@@ -88,9 +87,7 @@
                             </li>
                         </ul>
                     </p>
-                    <section>
-                        
-                    </section>
+                    
                 </article>
 
                 <article id="contact" class="panel">
@@ -126,5 +123,6 @@
             <script src="static/assets/breakpoints.min.js"></script>
             <script src="static/assets/util.js"></script>
             <script src="static/assets/main.js"></script>
+            <script src="proiect1.js"></script>
     </body>
 </html>
