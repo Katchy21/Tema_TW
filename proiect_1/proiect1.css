@@ -1,4 +1,5 @@
 body {
+    font-family: Arial;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +29,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
+    padding: 10px;
 }
 
 .nav-icon img {
@@ -51,7 +52,7 @@ nav {
     height: 454.81px;
     grid-template-columns: 2fr 1fr;
     gap: 100px;
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;  /* Smooth fade-in effect */
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out;  /* Smooth fade-in effect */
 }
 
 #home header {
@@ -111,10 +112,78 @@ nav {
 }
 
 /* CONTACT */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 #contact {
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0; */
+    /* visibility: hidden; */
     width: 1000px;
-    height: 600px;
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;  /* Smooth fade-in effect */
+    height: 700px;
+    display: flex; /* Use Flexbox */
+    justify-content: left; /* Center horizontally */
+    align-items: left; 
+    flex-direction: column;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out; /* Smooth fade-in effect */
+    padding: 40px;
+}
+
+.contact-form {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#contact h2 {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    font-size: 3rem;
+}
+
+#contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.form-group {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    flex: 0 0 100%; 
+}
+
+#contact input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #F4F5F7;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+.submit-button {
+    background-color: #1A1A1D !important;
+    padding: 15px;
+    width: 20%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.submit-button:hover {
+    opacity: 0.9;
 }

@@ -45,7 +45,7 @@
                         <h2>Fotin Mihnea</h2>
                         <p>Student at Faculty of Automatic Control and Computer Science, Bucharest</p>
                     </header>
-                    <a href="#work">
+                    <a href="#work" onclick="revealWorkArticle()">
                         <div class="image-icon">></div>
                         <img src="static/images/me.jpg" alt="auto biography picture" />
                     </a>
@@ -94,27 +94,35 @@
                     <header>
                         <h2>Contact Me</h2>
                     </header>
-                    <form action="#" method="post">
+                <div class="contact-form">
+                    <form action="mailto:mihnea_andrei.fotin@stud.upb.acs.ro" method="post" enctype="text/plain">
                         <div>
                             <div class="row">
-                                <div>
+                                <div class="form-group">
                                     <input type="text" name="name" placeholder="Name" />
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <input type="text" name="email" placeholder="Email" />
                                 </div>
-                                <div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group full-width">
                                     <input type="text" name="subject" placeholder="Subject" />
                                 </div>
-                                <div>
-                                    <textarea name="message" placeholder="Message" rows="6"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="form-group full-width">
+                                    <textarea name="message" placeholder="Message" rows="11"></textarea>
                                 </div>
-                                <div>
-                                    <input type="submit" value="Send Message" />
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <button type="submit" class="submit-button">Send Message</button>
                                 </div>
                             </div>
                         </div>
                     </form>
+                </div>
                 </article>
             </div>
         </div>
