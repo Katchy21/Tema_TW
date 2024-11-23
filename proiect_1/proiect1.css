@@ -19,6 +19,8 @@ body {
 
 #main {
     background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     /* width: 1000px;
     height: 454.81px; */
 }
@@ -100,15 +102,77 @@ nav {
 
 /* WORK */
 #work {
-    opacity: 0;
-    visibility: hidden;
     width: 1000px;
-    height: 600px;
+    height: 750px;
     transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out;  /* Smooth fade-in effect */
+}
+
+#work li {
+    padding: 8px;
+    text-align: left;
+}
+
+#work header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+#work li {
+    margin-bottom: 15px;
+  }
+
+#work .highlight {
+    font-weight: bold;
+    color: #0056b3;
+  }
+
+#work ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#work .row {
+    flex: 1; 
+    display: flex;
+    gap: 150px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 #work p {
     font-size: 3rem;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-top: 25px;
+    text-align: center;
+    cursor: pointer;
+    height: 70px;
+  }
+  .download-button:hover {
+    background-color: #0056b3;
+  }
+
+#work img {
+    width: 354px;
+    height: px;
+    border: 1px solid #000; /* Black border with 5px thickness */
+    border-radius: 10px;    /* Rounded corners (optional) */
+    display: block;        /* Ensure proper alignment */
+    margin: 20px auto;
 }
 
 /* CONTACT */
@@ -119,8 +183,6 @@ nav {
 }
 
 #contact {
-    /* opacity: 0; */
-    /* visibility: hidden; */
     width: 1000px;
     height: 700px;
     display: flex; /* Use Flexbox */
