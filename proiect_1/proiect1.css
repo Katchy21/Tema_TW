@@ -2,6 +2,7 @@ body {
     font-family: Arial;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -9,6 +10,7 @@ body {
 }
 
 #wrapper {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,24 +36,60 @@ nav {
     padding: 10px;
 }
 
+.nav-icon {
+    display: inline-block;
+    text-align: center;
+    position: relative; /* Necessary for positioning the text relative to the image */
+}
+
+.icon-text {
+    position: absolute;
+    top: -50px; /* Adjust this value to control the distance between text and image */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px; /* Adjust text size */
+    font-weight: bold; /* Optional */
+    padding: 10px 15px;
+    color: white; /* Text color */
+    background-color: #1A1A1D; 
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease; /* Smooth transition for appearing/disappearing */
+}
+
+.icon-text::after {
+    content: ''; /* This is necessary to create the triangle */
+    position: absolute;
+    bottom: -10px; /* Position the triangle below the box */
+    left: 50%; /* Center the triangle */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Left side of the triangle */
+    border-right: 10px solid transparent; /* Right side of the triangle */
+    border-top: 10px solid #1A1A1D; /* The color of the triangle */
+}
+
+.nav-icon:hover .icon-text {
+    opacity: 1; /* Make text visible when hovering over the nav icon */
+}
+
 .nav-icon img {
     width: 40px;
     height: 40px;
-    opacity: 0.7;
+    opacity: 0.5;
     transition: opacity 0.1s ease-out;
 }
 
 .nav-icon img:hover {
-    box-shadow: 0 0 15px 2px white; /* Blue glow effect */
     opacity: 1;
-    transform: scale(1.05); 
 }
 
 /* HOME */
 #home {
     display: grid;
     width: 1000px;
-    height: 454.81px;
+    height: 480.5px;
     grid-template-columns: 2fr 1fr;
     gap: 100px;
     transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out;  /* Smooth fade-in effect */
@@ -65,8 +103,8 @@ nav {
 }
 
 #home a img{
-    width: 100%;
-    height: 100%;
+    width: 332px;
+    height: 99.2%;
     flex: 1
 }
 
@@ -161,6 +199,7 @@ nav {
     text-align: center;
     cursor: pointer;
     height: 70px;
+    transition: background-color 0.1s ease-out;
   }
   .download-button:hover {
     background-color: #0056b3;
@@ -173,6 +212,11 @@ nav {
     border-radius: 10px;    /* Rounded corners (optional) */
     display: block;        /* Ensure proper alignment */
     margin: 20px auto;
+    transition: opacity 0.1s ease-out;
+}
+
+#work img:hover {
+    opacity: 0.8;
 }
 
 /* CONTACT */
@@ -249,3 +293,45 @@ nav {
 .submit-button:hover {
     opacity: 0.9;
 }
+
+/* HEADER */
+.header {
+    color: #fff;
+    position: absolute;      /* Position the header absolutely */
+    align-items: left !important;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    padding-left: 30px;
+    width: 100%;
+    background-color: #A6AEBF;
+  }
+
+/* FOOTER */
+
+footer {
+    margin-top: auto !important;  
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: -100px;
+    width: 100%;
+    align-items: end;
+    
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #ffdd57;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
