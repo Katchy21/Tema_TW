@@ -31,7 +31,7 @@ body {
 
 /* NAV */
 nav {
-    width: 200px;
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -172,7 +172,7 @@ nav {
 #work .highlight {
     font-weight: bold;
     color: #0056b3;
-  }
+}
 
 #work ul {
     list-style-type: disc;
@@ -301,6 +301,97 @@ nav {
     opacity: 0.9;
 }
 
+/* PROJECTS */
+#projects {
+    width: 100rem;
+    height: 70rem;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out; 
+    padding: 40px;
+}
+
+#projects .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+#projects .image {
+    flex: 1;
+}
+
+#projects img {
+    width: 30rem;
+    height: 20rem;
+}
+
+#projects .highlight {
+    flex: 2;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#projects h3{
+    font-size: 5rem; 
+    color: #0056b3;
+}
+
+#projects span{
+    font-weight: bold;
+    color: #0056b3;
+}
+
+#projects a {
+    font-size: 3rem;
+}
+
+#projects p{
+    position: absolute;
+
+    left: 40%;
+    visibility: hidden;
+    opacity: 0;
+    
+    font-size: 3rem;
+
+    transition: opacity 0.5s ease;
+    
+    padding: 2rem;
+}
+
+#projects .image-info1 {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.6rem;
+    opacity: 1;
+    transition: opacity 0.3s ease; 
+    z-index: 3;
+}
+
+#projects .image-info1:hover {
+    opacity: 0.8;
+}
+
+#projects .row.active p{
+    visibility: visible;
+    opacity: 1;
+}
+
+#projects .row.active .highlight{
+    visibility: hidden;
+    opacity: 0;
+}
+
 /* HEADER */
 .header {
     color: #fff;
@@ -387,6 +478,13 @@ footer {
     .image-icon  {
         top: 130%;
     }
+    #projects{
+        height: 90rem;
+        width: 80rem;
+    }
+    #projects p{
+        font-size: 2.5rem;
+    }
 
   }
   @media (min-width: 501px) and (max-width: 600px) {
@@ -405,6 +503,9 @@ footer {
     #contact{
         height: 100rem;
     }
+    #projects{
+        height: 80rem;
+    }
 }
   @media (min-width: 601px) and (max-width: 1024px) {
     body{
@@ -418,6 +519,9 @@ footer {
     }
     #contact{
         height: 85rem;
+    }
+    #projects{
+        height: 80rem;
     }
 }
 
