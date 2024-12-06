@@ -417,22 +417,28 @@ footer {
     bottom: -100px;
     width: 100%;
     align-items: end;
-    
-  }
+}
 
-  footer p {
+footer p {
     margin: 0;
     font-size: 15px;
-  }
+}
 
-  footer a {
-    color: #ffdd57;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-  }
+footer img{
+    height: 5rem;
+    width: 5rem;
+    transition: all 0.2s;
+}
+footer img:hover{
+    opacity: 0.7;
+}
+footer .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 1rem;
+}
 
   @media (min-width: 200px) and (max-width:500px) {
     #contact .row{
@@ -447,9 +453,6 @@ footer {
     .submit-button{
         padding: 10px;
         width: 40%;
-    }
-    body{
-        background-color: yellow;
     }
     html {
         font-size: 5px;
@@ -479,20 +482,22 @@ footer {
         top: 130%;
     }
     #projects{
-        height: 90rem;
-        width: 80rem;
+        padding: 15px;
+        height: 73rem;
+        width: 77rem;
     }
     #projects p{
         font-size: 2.5rem;
+        padding: 5rem;
+    }
+    #projects h3{
+        font-size: 4rem;
     }
 
   }
   @media (min-width: 501px) and (max-width: 600px) {
     .submit-button{
         width: 30%;
-    }
-    body{
-        background-color: blue;
     }
     html {
         font-size: 5px;
@@ -508,9 +513,6 @@ footer {
     }
 }
   @media (min-width: 601px) and (max-width: 1024px) {
-    body{
-        background-color: red;
-    }
     html {
         font-size: 7px;
     }
@@ -526,9 +528,6 @@ footer {
 }
 
 @media (min-width: 1025px) {
-    body{
-        background-color: green;
-    }
     html {
         font-size: 10px;
         padding: 30px;
