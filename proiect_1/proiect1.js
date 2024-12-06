@@ -50,3 +50,4 @@ function revealContactArticle(event) {
     },500);
     
 }
+

@@ -1,3 +1,7 @@
+html{
+    font-size: 10px;
+}
+
 body {
     font-family: Arial;
     display: flex;
@@ -10,7 +14,7 @@ body {
 }
 
 #wrapper {
-    padding-top: 50px;
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,8 +27,6 @@ body {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    /* width: 1000px;
-    height: 454.81px; */
 }
 
 /* NAV */
@@ -39,39 +41,39 @@ nav {
 .nav-icon {
     display: inline-block;
     text-align: center;
-    position: relative; /* Necessary for positioning the text relative to the image */
+    position: relative; 
 }
 
 .icon-text {
     position: absolute;
-    top: -50px; /* Adjust this value to control the distance between text and image */
+    top: -50px; 
     left: 50%;
     transform: translateX(-50%);
-    font-size: 14px; /* Adjust text size */
-    font-weight: bold; /* Optional */
+    font-size: 14px; 
+    font-weight: bold; 
     padding: 10px 15px;
-    color: white; /* Text color */
+    color: white; 
     background-color: #1A1A1D; 
     border-radius: 10px;
     opacity: 0;
-    transition: opacity 0.4s ease; /* Smooth transition for appearing/disappearing */
+    transition: opacity 0.4s ease; 
 }
 
 .icon-text::after {
-    content: ''; /* This is necessary to create the triangle */
+    content: ''; 
     position: absolute;
-    bottom: -10px; /* Position the triangle below the box */
-    left: 50%; /* Center the triangle */
+    bottom: -10px; 
+    left: 50%; 
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 10px solid transparent; /* Left side of the triangle */
-    border-right: 10px solid transparent; /* Right side of the triangle */
-    border-top: 10px solid #1A1A1D; /* The color of the triangle */
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    border-top: 10px solid #1A1A1D; 
 }
 
 .nav-icon:hover .icon-text {
-    opacity: 1; /* Make text visible when hovering over the nav icon */
+    opacity: 1; 
 }
 
 .nav-icon img {
@@ -87,24 +89,27 @@ nav {
 
 /* HOME */
 #home {
-    display: grid;
-    width: 1000px;
-    height: 480.5px;
+    display: flex;
+    width: 100rem;
+    height: 48rem;
     grid-template-columns: 2fr 1fr;
-    gap: 100px;
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out;  /* Smooth fade-in effect */
+    gap: 10rem;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out; 
 }
 
 #home header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     flex: 2;
-    padding-top: 15%;
     padding-left: 40px;
     text-align: left;
 }
 
 #home a img{
-    width: 332px;
-    height: 99.2%;
+    width: 33rem;
+    height: 48rem;
     flex: 1
 }
 
@@ -131,18 +136,19 @@ nav {
 }
 
 #home header h2 {
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 #home header p {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    opacity: 0.8;
 }
 
 /* WORK */
 #work {
-    width: 1000px;
-    height: 750px;
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out;  /* Smooth fade-in effect */
+    width: 100rem;
+    height: 75rem;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out; 
 }
 
 #work li {
@@ -151,7 +157,7 @@ nav {
 }
 
 #work header h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     margin-bottom: 10px;
     color: #0056b3;
     border-bottom: 2px solid #0056b3;
@@ -160,6 +166,7 @@ nav {
 
 #work li {
     margin-bottom: 15px;
+    font-size: 2rem;
   }
 
 #work .highlight {
@@ -175,7 +182,7 @@ nav {
 #work .row {
     flex: 1; 
     display: flex;
-    gap: 150px;
+    gap: 15rem;
     flex-direction: row;
     justify-content: center;
     text-align: center;
@@ -206,10 +213,10 @@ nav {
   }
 
 #work img {
-    width: 354px;
-    height: px;
-    border: 1px solid #000; /* Black border with 5px thickness */
-    border-radius: 10px;    /* Rounded corners (optional) */
+    width: 35rem;
+    height: 20rem;
+    border: 1px solid #000; 
+    border-radius: 10px;    
     display: block;        /* Ensure proper alignment */
     margin: 20px auto;
     transition: opacity 0.1s ease-out;
@@ -227,13 +234,13 @@ nav {
 }
 
 #contact {
-    width: 1000px;
-    height: 700px;
-    display: flex; /* Use Flexbox */
-    justify-content: left; /* Center horizontally */
+    width: 100rem;
+    height: 70rem;
+    display: flex; 
+    justify-content: left; 
     align-items: left; 
     flex-direction: column;
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out; /* Smooth fade-in effect */
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out, height 0.4s ease-out; 
     padding: 40px;
 }
 
@@ -273,7 +280,7 @@ nav {
     border: 1px solid #ccc;
     background-color: #F4F5F7;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 2rem;
     resize: none;
 }
 
@@ -297,7 +304,7 @@ nav {
 /* HEADER */
 .header {
     color: #fff;
-    position: absolute;      /* Position the header absolutely */
+    position: absolute;     
     align-items: left !important;
     top: 0;
     left: 0;
@@ -324,7 +331,7 @@ footer {
 
   footer p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 15px;
   }
 
   footer a {
@@ -335,3 +342,91 @@ footer {
   footer a:hover {
     text-decoration: underline;
   }
+
+  @media (min-width: 200px) and (max-width:500px) {
+    #contact .row{
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    #contact{
+        width: 70rem;
+        height: 100rem;
+    }
+    .submit-button{
+        padding: 10px;
+        width: 40%;
+    }
+    body{
+        background-color: yellow;
+    }
+    html {
+        font-size: 5px;
+    }
+    #work{
+        height: 100rem;
+        width: 70rem;
+    }
+    #work img{
+        margin: 10px auto;
+    }
+    #work .row{
+        gap: 5rem;
+    }
+    #work ul {
+        margin-left: 0px;
+    }
+    #home{
+        width: 70rem;
+        flex-direction: column;
+    }
+    #home a img{
+        width: 70rem;
+        height: 70rem;
+    }
+    .image-icon  {
+        top: 130%;
+    }
+
+  }
+  @media (min-width: 501px) and (max-width: 600px) {
+    .submit-button{
+        width: 30%;
+    }
+    body{
+        background-color: blue;
+    }
+    html {
+        font-size: 5px;
+    }
+    #work{
+        height: 100rem;
+    }
+    #contact{
+        height: 100rem;
+    }
+}
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body{
+        background-color: red;
+    }
+    html {
+        font-size: 7px;
+    }
+    #work{
+        height: 85rem;
+    }
+    #contact{
+        height: 85rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    body{
+        background-color: green;
+    }
+    html {
+        font-size: 10px;
+        padding: 30px;
+    }
+}
